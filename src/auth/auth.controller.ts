@@ -14,12 +14,23 @@ export class AuthController {
   }
 
   @Post('signin')
+  /* 
+  - handles "signin" request, 
+  - does other logic 
+  - return service related business logic 
+  */
   signin() {
-    return "I'am sign in";
+    console.log('In signin controller handler');
+    return this.authService.signin();
   }
 
   @Post('signup')
   signup() {
-    return "I'am signing up";
+    /* 
+  - handles "signup" request, 
+  - does other logic 
+  - return service related business logic 
+  */
+    return this.authService.signup();
   }
 }
